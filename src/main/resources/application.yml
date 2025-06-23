@@ -1,0 +1,22 @@
+spring:
+  web-driver:
+    remote:
+      url: http://127.0.0.1:40001
+      options:
+        - "--no-sandbox"
+    pool:
+      max-total: 5
+      min-idle: 1
+      max-idle: 3
+      block-when-exhausted: true
+      max-wait-millis: 1500
+      jmx-enabled: false
+      test-on-borrow: true
+      test-on-return: true
+
+server:
+  port: 41001
+
+logging:
+  level:
+    root: info
